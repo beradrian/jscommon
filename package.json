@@ -1,0 +1,10 @@
+{
+	"name": "jscommon"
+	, "version": "0.0.1"
+	, "description": "JSCommon"
+	, "main": "npm-require.js"
+	, "dependencies": { 
+		"npm": "*"
+		, "requirejs": "*"
+	}
+}
