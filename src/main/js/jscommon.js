@@ -281,7 +281,7 @@ module.exports = {
 	forEach: function(obj, callback, options) {
 		var props = [];
 		for (var p in obj) {
-			if (options.onlyOwnProperties === false || section.hasOwnProperty(p)) {
+			if (options.onlyOwnProperties === false || obj.hasOwnProperty(p)) {
 				continue;
 			}
 			if (options.skipFunctions === true && (typeof obj[p] !== "function")) {
