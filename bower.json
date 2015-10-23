@@ -1,0 +1,17 @@
+{
+  "name": "jscommon",
+  "version": "0.0.2",
+  "description": "jscommon - utilities for JavaScript not found in any ESx specification, Angular or jQuery",
+  "author": "Adrian Ber",
+  "license": "MIT",
+  "homepage": "https://github.com/beradrian/jscommon",
+  "main": "src/main/js/jscommon.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "docs",
+    "Gruntfile.js",
+    "index.html",
+    "package.json"
+  ]
+}
