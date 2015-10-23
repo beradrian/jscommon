@@ -1,6 +1,6 @@
 {
 	"name": "jscommon"
-	, "version": "0.0.1"
+	, "version": "0.0.2"
 	, "description": "jscommon - utilities for JavaScript not found in any ESx specification, Angular or jQuery"
 	, "author": {
 		"name": "Adrian Ber",
