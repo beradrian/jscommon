@@ -41,7 +41,7 @@ module.exports = {
 	 * @param element the element to be searched 
 	 * @return the index of the first element removed 
 	 */
-	removeElementFromArray : function(array, element) {
+	remove: function(array, element) {
 		var idx = array.indexOf(element);
 		var firstIndex = idx;
 		while (idx >= 0) {
@@ -54,7 +54,7 @@ module.exports = {
 	/** Adds all elements from the second array to the first one. Unlike concat this modifies the first argument. 
 	 * @return the first array
 	 */
-	addAll : function(targetArray, sourceArray) {
+	addAll: function(targetArray, sourceArray) {
 		for (var i = 0; i < sourceArray.length; i++) {
 			targetArray.push(sourceArray);
 		}
@@ -192,7 +192,7 @@ module.exports = {
 	/**
 	 * Moves the caret inside a text input element (INPUT[type='text'] or TEXTAREA) to the end.
 	 */
-	moveCaretToEnd : function(el) {
+	moveCaretToEnd: function(el) {
 		if (typeof el.selectionStart == "number") {
 			el.selectionStart = el.selectionEnd = el.value.length;
 		} else if (typeof el.createTextRange != "undefined") {
