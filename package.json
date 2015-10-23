@@ -1,10 +1,21 @@
 {
 	"name": "jscommon"
 	, "version": "0.0.1"
-	, "description": "JSCommon"
-	, "main": "npm-require.js"
-	, "dependencies": { 
-		"npm": "*"
-		, "requirejs": "*"
+	, "description": "jscommon - utilities for JavaScript not found in any ESx specification, Angular or jQuery"
+	, "author": {
+		"name": "Adrian Ber",
+		"email": "beradrian@yahoo.com"
+	}
+	, "repository" : { 
+		"type" : "git"
+		, "url" : "https://github.com/beradrian/jscommon.git"
+	}
+	, "main": "src/main/js/jscommon.js"
+	, "devDependencies" : {
+		"jasmine": ">=2.3.1"
+	}
+	, "scripts": {
+		"test": "node_modules/.bin/jasmine"
+		, "prepublish": "npm run pegjs & npm run test"
 	}
 }
