@@ -279,18 +279,19 @@ module.exports = {
 	 * passed to the callback function
 	 */
 	forEach: function(obj, callback, options) {
+		options = options || {};
 		var props = [];
 		for (var p in obj) {
-			if (options.onlyOwnProperties === false || obj.hasOwnProperty(p)) {
+			if (options.onlyOwnProperties === false && !obj.hasOwnProperty(p)) {
 				continue;
 			}
-			if (options.skipFunctions === true && (typeof obj[p] !== "function")) {
+			if (options.skipFunctions !== false && (typeof obj[p] === "function")) {
 				continue;
 			}
-			if (!options.whitelist || includes(options.whitelist, p)) {
+			if (options.whitelist && !includes(options.whitelist, p)) {
 				continue;
 			}
-			if (!options.blacklist || !includes(options.blacklist, p)) {
+			if (options.blacklist && includes(options.blacklist, p)) {
 				continue;
 			}
 			props.push(p);
