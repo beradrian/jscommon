@@ -161,6 +161,14 @@ module.exports = {
 		return (typeof str == 'string' || str instanceof String);
 	},
 	
+	isInt: function(n){
+		return Number(n) === n && n % 1 === 0;
+	},
+
+	isFloat: function(n){
+		return n === Number(n) && n % 1 !== 0;
+	},
+	
 	regExpEscape : function(value) {
 		return value.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
 	},

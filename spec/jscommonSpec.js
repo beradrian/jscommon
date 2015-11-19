@@ -13,6 +13,31 @@ describe("jscommon", function() {
 			expect(arr).toEqual([1, 2, 3]);
 		});
 	});
+	
+	describe("isInt", function() {
+		it("should be int", function() {
+			expect(jscommon.isInt(15)).toBe(true);
+			expect(jscommon.isInt(100)).toBe(true);
+		});
+		it("shouldn't be int", function() {
+			expect(jscommon.isInt(1.2)).toBe(false);
+			expect(jscommon.isInt("1a")).toBe(false);
+			expect(jscommon.isInt("1.2")).toBe(false);
+			expect(jscommon.isInt("23")).toBe(false);
+		});
+	});
+
+	describe("isFloat", function() {
+		it("should be float", function() {
+			expect(jscommon.isFloat(1.2)).toBe(true);
+			expect(jscommon.isFloat(100.34)).toBe(true);
+		});
+		it("shouldn't be float", function() {
+			expect(jscommon.isFloat(1)).toBe(false);
+			expect(jscommon.isFloat("1a")).toBe(false);
+			expect(jscommon.isFloat("1.2")).toBe(false);
+		});
+	});
 
 	describe("forEach", function() {
 		var obj = {
